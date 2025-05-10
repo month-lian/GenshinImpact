@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>原神兑换码 - Love</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .code-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .code {
+            font-family: monospace;
+            font-weight: bold;
+            color: #2b6cb0;
+        }
+        .copy-btn {
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .copy-btn:hover {
+            background-color: #3182ce;
+        }
+        .expired {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>永久兑换码</h2>
+    <div class="code-item">
+        <span class="code">yuanshen</span>
+        <button class="copy-btn" onclick="copyCode('yuanshen')">复制</button>
+        <span> - 永久有效 - 国服和国际服通用</span>
+    </div>
+
+    <h2>限时兑换码</h2>
+    <div class="code-item">
+        <span class="code">FYQSL6HTMCMW</span>
+        <button class="copy-btn" onclick="copyCode('FYQSL6HTMCMW')">复制</button>
+        <span> - 有效期至2025-5-16 00:00:00</span>
+    </div>
+
+    <h2>过期兑换码</h2>
+    <div class="code-item expired">
+        <span class="code">暂未更新</span>
+        <button class="copy-btn" disabled>已过期</button>
+    </div>
+
+    <script>
+        function copyCode(code) {
+            navigator.clipboard.writeText(code)
+                .then(() => {
+                    alert("已成功复制兑换码: " + code);
+                })
+                .catch(err => {
+                    alert("复制失败，请手动复制");
+                    console.error("复制错误:", err);
+                });
+        }
+    </script>
+</body>
+</html>
