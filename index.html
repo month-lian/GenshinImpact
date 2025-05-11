@@ -35,6 +35,26 @@
         .expired {
             opacity: 0.6;
         }
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -94,17 +114,27 @@
         <button class="copy-btn" disabled>已过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
+    <div id="toast" class="toast"></div>
 
     <script>
         function copyCode(code) {
             navigator.clipboard.writeText(code)
                 .then(() => {
-                    alert("已成功复制兑换码: " + code);
+                    showToast("已成功复制兑换码: " + code);
                 })
                 .catch(err => {
-                    alert("复制失败，请手动复制");
+                    showToast("复制失败，请手动复制");
                     console.error("复制错误:", err);
                 });
+        }
+        
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            toast.textContent = message;
+            toast.className = "show";
+            setTimeout(() => {
+                toast.className = toast.className.replace("show", "");
+            }, 3000);
         }
     </script>
 </body>
