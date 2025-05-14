@@ -75,6 +75,7 @@
     <div class="code-item">
         <span class="code">6Z9T4NHALD5S</span>
         <button class="copy-btn" onclick="copyCode('6Z9T4NHALD5S')">复制</button>
+        <button class="copy-btn" onclick="alert('原石*30 | 摩拉*20000 | 大英雄的经验*3')">查看奖励</button>
         <span> - 有效期至2025-5-22 00:00:00</span>
     </div>
 
@@ -128,7 +129,7 @@
                     showToast("已成功复制兑换码: " + code);
                 })
                 .catch(err => {
-                    showToast("复制失败，请手动复制");
+                    alert("复制失败，请手动复制：" + code);
                     console.error("复制错误:", err);
                 });
         }
