@@ -63,13 +63,13 @@
     <div class="code-item">
         <span class="code">yuanshen</span>
         <button class="copy-btn" onclick="copyCode('yuanshen')">复制</button>
-        <button class="copy-btn" onclick="alert('原石*50 | 大英雄的经验*3')">查看奖励</button>
+        <button class="copy-btn" onclick="alert('原石*50 | 大英雄的经验*3\n\n还没有过期啊(∗❛ั∀❛ั∗)✧*。 快进游戏领取吧~')">查看奖励</button>
         <span> - 国服永久兑换码</span>
     </div>
     <div class="code-item">
         <span class="code">GENSHINGIFT</span>
         <button class="copy-btn" onclick="copyCode('GENSHINGIFT')">复制</button>
-        <button class="copy-btn" onclick="alert('原石*50 | 大英雄的经验*3')">查看奖励</button>
+        <button class="copy-btn" onclick="alert('原石*50 | 大英雄的经验*3\n\n还没有过期啊(∗❛ั∀❛ั∗)✧*。 快进游戏领取吧~')">查看奖励</button>
         <span> - 国际服永久兑换码</span>
     </div>
 
@@ -82,50 +82,50 @@
     <div class="code-item">
         <span class="code">6Z9T4NHALD5S</span>
         <button class="copy-btn" onclick="copyCode('6Z9T4NHALD5S')">复制</button>
-        <button class="copy-btn" onclick="alert('原石*30 | 摩拉*20000 | 大英雄的经验*3')">查看奖励</button>
+        <button class="copy-btn" onclick="alert('原石*30 | 摩拉*20000 | 大英雄的经验*3\n\n还没有过期啊(∗❛ั∀❛ั∗)✧*。 快进游戏领取吧~')">查看奖励</button>
         <span> - 有效期至2025-5-22 00:00:00</span>
     </div>
 
     <h2>过期兑换码</h2>
     <div class="code-item expired">
         <span class="code">RADIANTSUN</span>
-        <button class="copy-btn" disabled>已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
         <span> - 有效期至 未知</span>
     </div>
     <div class="code-item expired">
         <span class="code">yuanshen2025gift</span>
-        <button class="copy-btn" disabled>已过期</button>
-        <button class="copy-btn" onclick="alert('摩拉*23333 | 脆弱树脂*2 | 冒险家的经验*10')">查看奖励</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
+        <button class="copy-btn" onclick="alert('摩拉*23333 | 脆弱树脂*2 | 冒险家的经验*10\n\n这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">查看奖励</button>
         <span> - 有效期至 未知</span>
     </div>
     <div class="code-item expired">
         <span class="code">NODKRAI0910</span>
-        <button class="copy-btn" disabled>已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div class="code-item expired">
         <span class="code">FATUI</span>
-        <button class="copy-btn" disabled>已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div class="code-item expired">
         <span class="code">FROSTMOONSCIONS</span>
-        <button class="copy-btn" disabled>已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div class="code-item expired">
         <span class="code">LIGHTKEEPERS</span>
-        <button class="copy-btn" disabled>已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div class="code-item expired">
         <span class="code">THEWILDHUNT</span>
-        <button class="copy-btn" disabled>已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div class="code-item expired">
         <span class="code">VOYNICHGUILD</span>
-        <button class="copy-btn" disabled>已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div id="toast" class="toast"></div>
@@ -134,10 +134,10 @@
         function copyCode(code) {
             navigator.clipboard.writeText(code)
                 .then(() => {
-                    showToast("已成功复制兑换码: " + code);
+                    showToast("复制成功了，快进游戏试试吧٩(*´◒`*)۶ 如果过期了记得反馈哟~");
                 })
                 .catch(err => {
-                    alert("复制失败，请手动复制：" + code);
+                    alert("复制失败了( ๑ŏ ﹏ ŏ๑ ) 可以手动复制哟~ " + code);
                     console.error("复制错误:", err);
                 });
         }
