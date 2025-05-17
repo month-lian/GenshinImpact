@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>原神兑换码(国服) - Love</title>
+    <title>原神兑换码 - Love</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -63,13 +63,13 @@
     <div class="code-item">
         <span class="code">yuanshen</span>
         <button class="copy-btn" onclick="copyCode('yuanshen')">复制</button>
-        <button class="copy-btn" onclick="alert('原石*50 | 大英雄的经验*3\n\n还没有过期啊(∗❛ั∀❛ั∗)✧*。 快进游戏领取吧~')">查看奖励</button>
+        <button class="copy-btn" onclick="alert('原石*50 | 大英雄的经验*3\n\n还没有过期啊(∗❛ั∀❛ั∗)✧*。 快进游戏领取吧~')">查看</button>
         <span> - 国服永久兑换码</span>
     </div>
     <div class="code-item">
         <span class="code">GENSHINGIFT</span>
         <button class="copy-btn" onclick="copyCode('GENSHINGIFT')">复制</button>
-        <button class="copy-btn" onclick="alert('原石*50 | 大英雄的经验*3\n\n还没有过期啊(∗❛ั∀❛ั∗)✧*。 快进游戏领取吧~')">查看奖励</button>
+        <button class="copy-btn" onclick="alert('原石*50 | 大英雄的经验*3\n\n还没有过期啊(∗❛ั∀❛ั∗)✧*。 快进游戏领取吧~')">查看</button>
         <span> - 国际服永久兑换码</span>
     </div>
 
@@ -82,7 +82,7 @@
     <div class="code-item">
         <span class="code">6Z9T4NHALD5S</span>
         <button class="copy-btn" onclick="copyCode('6Z9T4NHALD5S')">复制</button>
-        <button class="copy-btn" onclick="alert('原石*30 | 摩拉*20000 | 大英雄的经验*3\n\n还没有过期啊(∗❛ั∀❛ั∗)✧*。 快进游戏领取吧~')">查看奖励</button>
+        <button class="copy-btn" onclick="alert('原石*30 | 摩拉*20000 | 大英雄的经验*3\n\n还没有过期啊(∗❛ั∀❛ั∗)✧*。 快进游戏领取吧~')">查看</button>
         <span> - 有效期至2025-5-22 00:00:00</span>
     </div>
 
@@ -95,7 +95,7 @@
     <div class="code-item expired">
         <span class="code">yuanshen2025gift</span>
         <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
-        <button class="copy-btn" onclick="alert('摩拉*23333 | 脆弱树脂*2 | 冒险家的经验*10\n\n这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">查看奖励</button>
+        <button class="copy-btn" onclick="alert('摩拉*23333 | 脆弱树脂*2 | 冒险家的经验*10\n\n这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">查看</button>
         <span> - 有效期至 未知</span>
     </div>
     <div class="code-item expired">
@@ -128,9 +128,117 @@
         <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
+    <hr />
+    <h3>其他</h3>
+    <div class="code-item">
+        <p><strong>作者</strong>：<span class="code">LOVE</span> | <a href="javascript:void(0)" onclick="Announcements()" style="text-decoration: none">公告</a></p>
+    </div>
+    <div class="code-item">
+        <p><strong>版本</strong>：<a id="version-text" href="javascript:void(0)" onclick="Versioninterpretation()" class="code"></a> - <a href="javascript:void(0)" onclick="Updatelog()" style="text-decoration: none">更新日志</a></p>
+    </div>
+    <div class="code-item">
+        <p><strong>反馈</strong> - <span class="code">QQ</span>：<a id="version-qqNumber" href="javascript:void(0)" onclick="contactQQ()" style="text-decoration: none"></a> | <span class="code">邮箱</span>：<a id="version-mailbox" href="javascript:void(0)" onclick="xmailbox()" style="text-decoration: none"></a></p>
+    </div>
     <div id="toast" class="toast"></div>
 
     <script>
+        const qqNumber = "2921569575";
+        
+        const Announcement = "·复制粘贴仅支持新版浏览器"
+        
+        const CurrentVersion = "1.15.517"
+        
+        const mailaddress = `${qqNumber}@qq.com`
+        
+        const UPdate = `-->1.15.517\n·更新QQ反馈(移动端无法使用)\n·更新邮箱反馈(移动端无法使用)\n\n-->1.05.517\n·反馈布局修改为其他\n·新增作者布局\n·新增版本布局\n·优化反馈布局\n·QQ反馈适配PC端`
+        
+        const Version = "{大更新}.{新增布局}.{更新日期}\n更新日志开始从1.15开始记录"
+        
+        const versionmailbox = document.getElementById("version-mailbox");
+  
+        versionmailbox.innerHTML = `${qqNumber}@qq.com`;
+        
+        const versionqqNumber = document.getElementById("version-qqNumber");
+  
+        versionqqNumber.innerHTML = `${qqNumber}`;
+        
+        const versionCurrentVersion = document.getElementById("version-text");
+  
+        versionCurrentVersion.innerHTML = `${CurrentVersion}`;
+        
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        function xmailbox() {
+            if (isMobile()) {
+                try {
+                    navigator.clipboard.writeText(qqNumber);
+                    alert(`邮箱地址已经复制了(｡>∀<｡) 您可以登录你的邮箱发送${mailaddress}，谢谢您的反馈~`);
+                } catch (err) {
+                    alert(`邮箱地址复制失败了(╥_╥) 您只能自己复制邮箱地址了：${mailaddress}~`);
+                }
+            } else {
+            let userlnput = prompt('请输入反馈内容：', '')
+            const mailtoLink = `mailto:2921569575@qq.com?subject=反馈&body=${userlnput}`;
+            try {
+                window.location.href = mailtoLink;
+                showToast('正在打开邮件客户端...');
+                } catch (e) {
+                showToast('无法打开邮件客户端：' + e.message);
+                }
+            }
+        }
+
+        function isQQInstalled() {
+            try {
+                const iframe = document.createElement('iframe');
+                iframe.src = 'tencent://';
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+                setTimeout(() => {
+                    document.body.removeChild(iframe);
+                }, 100);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function contactQQ() {
+            if (isMobile()) {
+                try {
+                    navigator.clipboard.writeText(qqNumber);
+                    alert(`QQ号已经复制了(｡>∀<｡) 您可以到QQ内搜索${qqNumber}，谢谢您的反馈~`);
+                } catch (err) {
+                    alert(`QQ号复制失败了(╥_╥) 您只能自己复制QQ号了：${qqNumber}~`);
+                }
+            } else {
+                if (isQQInstalled()) {
+                    window.location.href = `tencent://message/?uin=${qqNumber}&Site=month-lian.github.io/GenshinImpact&Menu=yes`;
+                } else {
+                    if (confirm("您好像还没有下载QQ客户端（︶︿︶），您要不要去下载？")) {
+                        window.open('https://im.qq.com/download');
+                    }
+                }
+            }
+        }
+
+        let timer;
+        window.onblur = () => clearTimeout(timer);
+        
+        function Announcements() {
+            alert(`${Announcement}`)
+        }
+        
+        function Updatelog() {
+            alert(`${UPdate}`)
+        }
+        
+        function Versioninterpretation() {
+            alert(`${Version}`)
+        }
+        
         function copyCode(code) {
             navigator.clipboard.writeText(code)
                 .then(() => {
@@ -138,7 +246,7 @@
                 })
                 .catch(err => {
                     alert("复制失败了( ๑ŏ ﹏ ŏ๑ ) 可以手动复制哟~ " + code);
-                    console.error("复制错误:", err);
+                    console.error("复制失败:", err);
                 });
         }
         
@@ -150,7 +258,7 @@
                 toast.className = toast.className.replace("show", "");
             }, 3000);
         }
+        
     </script>
 </body>
 </html>
-
