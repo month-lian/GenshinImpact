@@ -89,43 +89,43 @@
     <h2>过期兑换码</h2>
     <div class="code-item expired">
         <span class="code">RADIANTSUN</span>
-        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">过期</button>
         <span> - 有效期至 未知</span>
     </div>
     <div class="code-item expired">
         <span class="code">yuanshen2025gift</span>
-        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">过期</button>
         <button class="copy-btn" onclick="alert('摩拉*23333 | 脆弱树脂*2 | 冒险家的经验*10\n\n这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">查看</button>
         <span> - 有效期至 未知</span>
     </div>
     <div class="code-item expired">
         <span class="code">NODKRAI0910</span>
-        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div class="code-item expired">
         <span class="code">FATUI</span>
-        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div class="code-item expired">
         <span class="code">FROSTMOONSCIONS</span>
-        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div class="code-item expired">
         <span class="code">LIGHTKEEPERS</span>
-        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div class="code-item expired">
         <span class="code">THEWILDHUNT</span>
-        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <div class="code-item expired">
         <span class="code">VOYNICHGUILD</span>
-        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">已过期</button>
+        <button class="copy-btn" onclick="showToast('这...似乎已经过期了(。•́︿•̀。) 下次记得快点吧~')">过期</button>
         <span> - 有效期至2025-5-3 12:00:00</span>
     </div>
     <hr />
@@ -139,6 +139,14 @@
     <div class="code-item">
         <p><strong>反馈</strong> - <span class="code">QQ</span>：<a id="version-qqNumber" href="javascript:void(0)" onclick="contactQQ()" style="text-decoration: none"></a> | <span class="code">邮箱</span>：<a id="version-mailbox" href="javascript:void(0)" onclick="xmailbox()" style="text-decoration: none"></a></p>
     </div>
+    <div class="code-item">
+        <p><strong>开源地址</strong>：<a href="https://github.com/month-lian/GenshinImpact.git" style="text-decoration: none">https://github.com/month-lian/GenshinImpact.git</a></p>
+    </div>
+    <div class="code-item">
+    <button class="copy-btn" onclick="xcfpassword()">XCF.password</button>
+    <button class="copy-btn" onclick="base64encode()">BASE编码</button>
+    <button class="copy-btn" onclick="base64decode()">BASE解码</button>
+    </div>
     <div id="toast" class="toast"></div>
 
     <script>
@@ -150,7 +158,7 @@
         
         const mailaddress = `${qqNumber}@qq.com`
         
-        const UPdate = `-->1.15.517\n·更新QQ反馈(移动端无法使用)\n·更新邮箱反馈(移动端无法使用)\n\n-->1.05.517\n·反馈布局修改为其他\n·新增作者布局\n·新增版本布局\n·优化反馈布局\n·QQ反馈适配PC端`
+        const UPdate = `-->1.15.517\n·更新QQ反馈(移动端无法使用)\n·更新邮箱反馈(移动端无法使用)\n·新增开源地址\n\n-->1.05.517\n·反馈布局修改为其他\n·新增作者布局\n·新增版本布局\n·优化反馈布局\n·QQ反馈适配PC端`
         
         const Version = "{大更新}.{新增布局}.{更新日期}\n更新日志开始从1.15开始记录"
         
@@ -168,6 +176,18 @@
         
         function isMobile() {
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        
+        function xcfpassword() {
+            alert("2025-5-18 15:30:00 准时开放该功能")
+        }
+        
+        function base64encode() {
+            alert("2025-5-18 16:30:00 准时开放该功能")
+        }
+        
+        function base64decode() {
+            alert("2025-5-18 16:30:00 准时开放该功能")
         }
 
         function xmailbox() {
